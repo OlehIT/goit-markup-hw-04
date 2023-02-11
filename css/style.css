@@ -65,6 +65,8 @@ img {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   padding-top: 24px;
   padding-bottom: 24px;
 }
@@ -153,8 +155,15 @@ img {
 .hero {
   padding-top: 188px;
   padding-bottom: 188px;
-  background-color: var(--hero-and-footer-background-color);
+  background-color: rgba(46, 47, 66, 0.7);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7) 0%,
+      rgba(46, 47, 66, 0.7) 50%
+    ),
+    url(../images/portfolio-Image/background-hero.jpg);
   text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .container-hero {
@@ -211,6 +220,20 @@ img {
 
 .skills-item {
   width: 264px;
+}
+
+.skills-item-div {
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  width: 264px;
+  height: 112px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-svg {
 }
 
 .skills-item-title {
@@ -298,6 +321,7 @@ img {
 }
 
 .team-img {
+  width: 100%;
 }
 
 .team-item-title {
@@ -314,9 +338,93 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--secondary-color);
+  margin-bottom: 8px;
+}
+
+.team-list-network {
+  display: flex;
+  gap: 24px;
+}
+
+.team-item-network {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-item-network:hover {
+  background-color: #404bbf;
+}
+
+.team-item-network > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.list-network-svg {
+  fill: #f4f4fd;
 }
 
 /* ********** /TEAM ********** */
+
+/* ********** CUSTOMERS ********** */
+
+.customers {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+
+.customers-title {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--main-color);
+  margin-bottom: 72px;
+}
+
+.customers-list {
+  display: flex;
+  gap: 24px;
+}
+
+.customers-item {
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  width: calc((100% - 120px) / 6);
+  height: 88px;
+}
+
+.customers-link {
+  width: 168px;
+  height: 88px;
+  color: #8e8f99;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customers-link:is(:hover, :focus) {
+  color: #404bbf;
+  border-color: #404bbf;
+}
+
+.customers-svg {
+  fill: currentColor;
+}
+
+/* ********** /CUSTOMERS ********** */
 
 /* $$$$$$$$$$$$$$$$$$$$ /MAIN $$$$$$$$$$$$$$$$$$$$ */
 
@@ -326,6 +434,15 @@ img {
   background-color: var(--hero-and-footer-background-color);
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.container-footer {
+  display: flex;
+  gap: 120px;
+}
+
+.footer-left {
+  width: 264px;
 }
 
 .footer-logo {
@@ -349,6 +466,51 @@ img {
   color: #e7e9fc;
   margin-top: 16px;
   max-width: 264px;
+}
+
+.footer-right {
+  width: 208px;
+}
+
+.footer-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--hero-text-color);
+  margin-bottom: 16px;
+}
+
+.footer-list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-item:hover {
+  background-color: #31d0aa;
+}
+
+.footer-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.footer-svg {
+  fill: #f4f4fd;
 }
 
 /* $$$$$$$$$$$$$$$$$$$$ /FOOTER $$$$$$$$$$$$$$$$$$$$ */
@@ -383,7 +545,7 @@ img {
   color: var(--primary-brand-color);
   cursor: pointer;
   font-family: inherit;
-  border: 1px solid transparent;
+  border: 1px solid #e7e9fc;
   border-radius: 4px;
   padding: 12px 24px;
 }
@@ -404,6 +566,13 @@ img {
 
 .portfolio-main-project-items {
   max-width: 360px;
+}
+
+.portfolio-main-project-items:hover {
+  cursor: pointer;
+  border: 1px solid #f4f4fd;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-main-project-img {
