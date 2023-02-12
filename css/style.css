@@ -483,20 +483,24 @@ img {
 .footer-item {
   width: 40px;
   height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-item:is(:hover, :focus) {
+  background-color: #31d0aa;
 }
 
 .footer-list-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.footer-list-link:is(:hover, :focus) {
-  background-color: #31d0aa;
 }
 
 .footer-svg {
